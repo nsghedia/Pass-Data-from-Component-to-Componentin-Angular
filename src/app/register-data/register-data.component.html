@@ -1,0 +1,17 @@
+<div class="card shadow p-2 mb-3 rounded mt-1"
+    [ngClass]="(item.Location=='Bangalore')?'text-white bg-warning':'text-white bg-success'">
+    <div class="card-header">
+        Users Account
+        <button type="button" class="close" aria-label="Close" (click)="deleteCard(item.Mobile)">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{item.FirstName | titlecase}}</h5>
+        <p class="card-text">
+            LastName: {{item.LastName}}
+            Mobile: {{item.Mobile}}
+            Location:{{item.Location}}
+        </p>
+    </div>
+</div>
