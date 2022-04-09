@@ -1,6 +1,6 @@
 <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-    <div class="card-header">
-        Register Here
+    <div class="card-header text-info text-center">
+        <h4> Register Here</h4>
     </div>
     <div class="card-body">
         <form (ngSubmit)="SubmitForm(regisForm)" #regisForm="ngForm">
@@ -39,8 +39,10 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm" [disabled]="!regisForm.valid">Submit</button>
-            <button type="reset" class="btn btn-danger btn-sm ml-2" style="margin-left: 2px;">Reset</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm" [disabled]="!regisForm.valid">Submit</button>
+                <button type="reset" class="btn btn-danger btn-sm ml-2" style="margin-left: 2px;">Reset</button>
+            </div>
         </form>
     </div>
 </div>

@@ -9,13 +9,13 @@ import { NgForm } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   @Output() tableDataValues = new EventEmitter<string>();
-  loc = "Bangalore";
+  locations = ['Bangalore', 'Kalaburagi', 'Solapur'];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  locations = ['Bangalore', 'Kalaburagi', 'Solapur'];
   SubmitForm(regisForm: NgForm) {
     this.tableDataValues.emit(regisForm.value);
   }
